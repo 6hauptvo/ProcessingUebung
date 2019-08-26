@@ -9,7 +9,7 @@ public class BarcodeGeneratorGUI extends JFrame
     {
         super();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setTitle("UPC-A_Barcode");
+        setTitle("UPC-A-Barcode");
     }
 
     @Override
@@ -25,14 +25,14 @@ public class BarcodeGeneratorGUI extends JFrame
             }
             else if(barcode.charAt(i) == '2')
             {
-                g.fillRect(50+(2*i),100,2,240);
+                g.fillRect(50+(2*i),100,2,220);
             }
         }
     }
 
     public static void main(String[] args)
     {
-        _barcodeGeneratorObjekt = new BarcodeGenerator("01234567890");
+        _barcodeGeneratorObjekt = new BarcodeGenerator("34975315028");
         BarcodeGeneratorGUI gui = new BarcodeGeneratorGUI();
         gui.setSize(600, 400);
         gui.setVisible(true);
