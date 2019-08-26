@@ -19,7 +19,7 @@ public class StringToStringArrayUebungTest
                     arrayToString += arrayEintrag + " ";
                 }
             }
-            assertEquals("-Null -Ei,ns -Zwei -Drei -Vier", arrayToString);
+            assertEquals("-Null -Ei,ns -Zwei -Drei -Vier", arrayToString.strip());
             assertEquals("-Null", stringArray[0]);
             assertEquals("-Ei,ns", stringArray[1]);
             assertEquals("-Vier", stringArray[4]);
