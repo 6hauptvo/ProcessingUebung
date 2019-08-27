@@ -7,16 +7,14 @@ public class StarkesPasswortPruefer
      * Diese Methode prüft ob min. 8 Zeichen, min. 1 Kleinbuchstabe, min. 1 Großbuchstabe, min. eine Ziffer und min.
      * 1 Sonderzeichen vorhanden sind.
      */
-    public Boolean passwortpruefer(String passwort)
+    public Boolean passwortpruefer(String eingabepasswort)
     {
-        passwort = passwort.strip();
-
+        String passwort = eingabepasswort.strip();
         Boolean sonderzeichen = false;
         Boolean mindeslaenge = false;
         Boolean kleinbuchstabe = false;
         Boolean grossbuchstabe = false;
         Boolean ziffer = false;
-
         if (passwort.length() > 7 && (passwort.contains("*") || passwort.contains("!"))) {
             mindeslaenge = true;
             sonderzeichen = true;
@@ -37,7 +35,6 @@ public class StarkesPasswortPruefer
                     }
                 }
             }
-
         }
         return grossbuchstabe && kleinbuchstabe && sonderzeichen && mindeslaenge && ziffer;
     }

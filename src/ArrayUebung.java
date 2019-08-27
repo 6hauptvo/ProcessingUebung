@@ -2,22 +2,22 @@ public class ArrayUebung
 {
     public static String rueckwaertsschreiber(String eingabewort)
     {
-        eingabewort = eingabewort.strip().toLowerCase();
+        String wort = eingabewort.strip().toLowerCase();
         char[] buchstabenArray = new char[100];
-        for(int i = 1; i <= eingabewort.length(); i++)
+        for(int i = 1; i <= wort.length(); i++)
         {
-            char einBuchstabe = eingabewort.charAt(eingabewort.length()-i);
+            char einBuchstabe = wort.charAt(wort.length()-i);
             buchstabenArray[i-1] = einBuchstabe;
         }
         System.out.println(buchstabenArray);
-        return eingabewort;
+        return wort;
     }
 
     public static void pallindromPruefer(String eingabewort)
     {
-        eingabewort = eingabewort.strip().toLowerCase();
-        String umgekehrtesWort = rueckwaertsschreiber(eingabewort);
-        if(umgekehrtesWort.equals(eingabewort))
+        String wort = eingabewort.strip().toLowerCase();
+        String umgekehrtesWort = rueckwaertsschreiber(wort);
+        if(umgekehrtesWort.equals(wort))
         {
             System.out.println("Ein Pallindrom.");
         }

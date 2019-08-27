@@ -158,7 +158,7 @@ public class BarcodeGenerator
                 buchstabe = true;
             }
         }
-        if(counter == 11 && buchstabe == false)
+        if(counter == 11 && !buchstabe)
         {
             korrekt = true;
         }

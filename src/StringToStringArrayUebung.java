@@ -2,9 +2,9 @@ public class StringToStringArrayUebung
 {
     //TODO fix this method, Nullpointer abfangen
 
-    public String[] toStringArray(String jsonString)
+    public String[] toStringArray(String eingabestring)
     {
-        jsonString = jsonString.strip();
+        String jsonString = eingabestring.strip();
         String[] stringArray = new String[100];
 
         if(formPruefer(jsonString))

@@ -1,5 +1,3 @@
-import javax.print.DocFlavor;
-
 /**
  * Diese Klasse gibt einen String von Buchstaben als komprimierten String in der Form Anzahl eines Buchstaben Buchstabe zurück.
  */
