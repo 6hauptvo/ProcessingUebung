@@ -26,18 +26,19 @@ public class Songtextsuche
         return url;
     }
 
-    public String stringUmwandler(String eingabeWort)
+    public String stringUmwandler(String wort)
     {
+        String eingabeWort = wort.strip();
+        String formatiertesWort = eingabeWort;
         for(int i = 0; i < eingabeWort.length(); i++)
         {
             if(eingabeWort.charAt(i) == ' ')
             {
-                String ersterTeil = eingabeWort.substring(0, i);
-                String zweiterTeil = eingabeWort.substring(i);
-                eingabeWort = ersterTeil + "_" + zweiterTeil;
-                System.out.println(eingabeWort);
+                String ersterTeil = formatiertesWort.substring(0, i);
+                String zweiterTeil = formatiertesWort.substring(i+1);
+                formatiertesWort = ersterTeil + "_" + zweiterTeil;
             }
         }
-        return eingabeWort;
+        return formatiertesWort;
     }
 }
