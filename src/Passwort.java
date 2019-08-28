@@ -5,22 +5,13 @@ public class Passwort
 
     }
 
-    public Boolean changePassword(String altesPasswort, String neuesPasswort)
+    public Boolean changePassword(char[] altesPasswort, char[] neuesPasswort)
     {
         return false;
     }
 
-    public void deletePassword(String password)
+    public void deletePassword(char[] password)
     {
 
-    }
-
-    char[] makePasswordUnreadable(char[] password)
-    {
-        for(int i = 0; i < password.length; i++)
-        {
-            password[i] = ' ';
-        }
-        return password;
     }
 }
